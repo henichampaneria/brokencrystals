@@ -5,10 +5,10 @@ jobs:
       - image: byrnedo/alpine-curl
     environment:
       armorcodehost: https://qa.armorcode.ai
-      product: Product_1
-      subProduct: Subproduct_1testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+      product: Aromorcode UI
+      subProduct: Tushar-ArmorCode/90DaysOfDevOps
       environment: Production
-      token: 96830a4d-9fc7-4900-aeac-a14305e4e352
+      token: $ARMORCODE_TOKEN
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
       end: 30
@@ -16,7 +16,7 @@ jobs:
       - run:
           name: "Armorcode Validate"
           command: |
-              token=$ARMORCODE_TOKEN
+              token=bf871faa-412c-483b-a762-273449c6d758
               wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:
