@@ -5,8 +5,8 @@ jobs:
       - image: byrnedo/alpine-curl
     environment:
       armorcodehost: https://qa.armorcode.ai
-      product: Aromorcode UI
-      subProduct: Tushar-ArmorCode/90DaysOfDevOps
+      product: Product_1
+      subProduct: Subproduct_2
       environment: Production
       token: $ARMORCODE_TOKEN
       buildTool: CIRCLE_CI
@@ -16,7 +16,7 @@ jobs:
       - run:
           name: "Armorcode Validate"
           command: |
-              token=bf871faa-412c-483b-a762-273449c6d758
+              token=83d44eb4-e350-4d1c-af62-832c0a3ee87d
               wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:
